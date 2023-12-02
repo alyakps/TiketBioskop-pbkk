@@ -1,0 +1,15 @@
+ERROR - 2023-12-01 23:58:24 --> Error connecting to the database: Unknown database 'bioskop'
+CRITICAL - 2023-12-01 23:58:24 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'bioskop'
+in SYSTEMPATH\Database\BaseConnection.php on line 416.
+ 1 SYSTEMPATH\Database\BaseConnection.php(586): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`nama`, `email`, `password`, `alamat`, `no_telp`, `role_id`) VALUES (:nama:, :email:, :password:, :alamat:, :no_telp:, :role_id:)', [...], false)
+ 3 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 6 APPPATH\Controllers\Daftar.php(21): CodeIgniter\Model->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Daftar->mendaftar()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Daftar))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
